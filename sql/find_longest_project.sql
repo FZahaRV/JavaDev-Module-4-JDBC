@@ -4,7 +4,7 @@ WITH ProjectsWithNames AS (
         START_DATE,
         FINISH_DATE,
         DATEDIFF('MONTH', START_DATE, FINISH_DATE) AS MONTH_COUNT,
-        'Project' || CHR(65 + (ID - 2)) AS NAME
+        'Project' || CHR(65 + (ID - 1)) AS NAME
     FROM project
 )
 SELECT NAME, MONTH_COUNT

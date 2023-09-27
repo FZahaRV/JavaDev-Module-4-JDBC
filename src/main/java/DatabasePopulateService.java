@@ -7,6 +7,7 @@ public class DatabasePopulateService {
         try (Statement stmt = Database.getInstance().getConnection().createStatement()) {
             stmt.execute(reader.sqlQueryFromFileReader("populate_db.sql"));
             System.out.println("Filling of the table is successful");
+            Database.getInstance().disconnect();
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Failed to fill tables, SQL error: " + e.getMessage());

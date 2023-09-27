@@ -4,9 +4,9 @@ import java.sql.SQLException;
 
 public class Database {
     private static Database database;
-    private String dbUrl;
-    private String dbUser;
-    private String dbPass;
+    private final String dbUrl;
+    private final String dbUser;
+    private final String dbPass;
     private Connection conn;
     public Database() {
         dbUrl = "jdbc:h2:~/test";
