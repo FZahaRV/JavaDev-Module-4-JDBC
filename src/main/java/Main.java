@@ -1,8 +1,6 @@
 import java.sql.SQLException;
-import java.util.List;
 public class Main {
     public static void main(String[] args) throws SQLException {
-        FileReader reader = new FileReader();
         DatabaseQueryService queryService = new DatabaseQueryService();
         System.out.println("\nYoungestEldestWorkers");
         for (DatabaseQueryService.YoungestEldestWorkers res: queryService.findYoungestEldestWorkers()) {
