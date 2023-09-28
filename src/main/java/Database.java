@@ -8,7 +8,7 @@ public class Database {
     private final String dbUser;
     private final String dbPass;
     private Connection conn;
-    public Database() {
+    private Database() {
         dbUrl = "jdbc:h2:~/test";
         dbUser = "sa";
         dbPass = "";
